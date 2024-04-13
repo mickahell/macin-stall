@@ -6,5 +6,5 @@
   register: homebrew_check
 
 - name: Install Brew
-  ansible.builtin.cmd: /bin/bash -c "$(curl -fsSL {{ brew_url }})"
+  ansible.builtin.command: /bin/bash -c "$(curl -fsSL {{ brew_url }})"
   when: not homebrew_check.stat.exists
