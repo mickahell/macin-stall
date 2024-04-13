@@ -1,8 +1,7 @@
 ---
 
 - hosts: all
-  collections:
-    - community.general
+
   roles:
     - { role: brew,         role_version: latest }
     - { role: system,       role-version: latest }
