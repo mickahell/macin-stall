@@ -11,6 +11,6 @@
   when: docker_install
 
 - name: Install anaconda
-  community.general.homebrew_cast:
+  community.general.homebrew_cask:
     name: anaconda
   when: anaconda_install

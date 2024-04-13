@@ -25,6 +25,6 @@
   loop: "{{ prog_packages }}"
 
 - name: Install pycharm
-  community.general.homebrew_cast:
+  community.general.homebrew_cask:
     name: pycharm
   when: ide_install
