@@ -2,6 +2,7 @@
 
 system_packages:
   - git
+  - shellcheck
   - neofetch
 
 docker_install: true
