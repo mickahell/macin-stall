@@ -7,4 +7,4 @@
 - name: Install arduino ide
   community.general.homebrew_cask:
     name: arduino-ide
-  when: ide_install
+  when: arduino_env_ide_install

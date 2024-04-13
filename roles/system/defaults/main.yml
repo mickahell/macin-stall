@@ -6,5 +6,5 @@ system_packages:
   - shellcheck
   - neofetch
 
-docker_install: true
-anaconda_install: false
+system_docker_install: true
+system_anaconda_install: false

@@ -3,24 +3,24 @@
 - name: Install video apps
   community.general.homebrew_cask:
     name: "{{ item }}"
-  loop: "{{ video_apps }}"
+  loop: "{{ apps_video }}"
 
 - name: Install browser apps
   community.general.homebrew_cask:
     name: "{{ item }}"
-  loop: "{{ browser_apps }}"
+  loop: "{{ apps_browser }}"
 
 - name: Install coding apps
   community.general.homebrew_cask:
     name: "{{ item }}"
-  loop: "{{ coding_apps }}"
+  loop: "{{ apps_coding }}"
 
 - name: Install password manager apps
   community.general.homebrew_cask:
     name: "{{ item }}"
-  loop: "{{ password_apps }}"
+  loop: "{{ apps_password }}"
 
 - name: Install xtra apps
   community.general.homebrew_cask:
     name: "{{ item }}"
-  loop: "{{ xtra_apps }}"
+  loop: "{{ apps_xtra }}"

@@ -8,3 +8,4 @@
 - name: Install Brew
   ansible.builtin.command: /bin/bash -c "$(curl -fsSL {{ brew_url }})"
   when: not homebrew_check.stat.exists
+  changed_when: true

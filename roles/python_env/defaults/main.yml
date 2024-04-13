@@ -1,6 +1,6 @@
 ---
 
-science_packages:
+python_env_science_packages:
   - pandas
   - numpy
   - scipy
@@ -8,7 +8,7 @@ science_packages:
   - jupyter
   - matplotlib
 
-quantum_packages:
+python_env_quantum_packages:
   - qiskit
   - qiskit-aer
   - qiskit-nature
@@ -17,7 +17,7 @@ quantum_packages:
   - qiskit-machine-learning
   - qiskit-ibm-runtime
 
-test_packages:
+python_env_test_packages:
   - tox
   - pytest
   - black
@@ -26,13 +26,13 @@ test_packages:
   - pillow
   - testcontainers
 
-coding_packages:
+python_env_coding_packages:
   - pyyaml
   - nbconvert
   - nbformat
   - direnv
   - streamlit
 
-xtra_packages: []
+python_env_xtra_packages: []
 
-ide_install: true
+python_env_ide_install: true

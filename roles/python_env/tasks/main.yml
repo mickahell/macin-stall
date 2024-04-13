@@ -3,21 +3,21 @@
 - name: Scientific packages
   ansible.builtin.pip:
     name: "{{ item }}"
-  loop: "{{ science_packages }}"
+  loop: "{{ python_env_science_packages }}"
 
 - name: Quantum packages
   ansible.builtin.pip:
     name: "{{ item }}"
-  loop: "{{ quantum_packages }}"
+  loop: "{{ python_env_quantum_packages }}"
 
 - name: Testing packages
   ansible.builtin.pip:
     name: "{{ item }}"
-  loop: "{{ test_packages }}"
+  loop: "{{ python_env_test_packages }}"
 
 - name: Merge test_packages & xtra_packages vars
   ansible.builtin.set_fact:
-    prog_packages: "{{ test_packages + xtra_packages }}"
+    prog_packages: "{{ python_env_test_packages + python_env_xtra_packages }}"
 
 - name: Pagramming + xtra packages
   ansible.builtin.pip:
@@ -27,4 +27,4 @@
 - name: Install pycharm
   community.general.homebrew_cask:
     name: pycharm
-  when: ide_install
+  when: python_env_ide_install
