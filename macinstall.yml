@@ -1,13 +1,12 @@
 ---
 
-- hosts: all
-  collections:
-    - community.general
+- name: "Macin'stall"
+  hosts: all
 
   roles:
-    - { role: brew,         role_version: latest }
-    - { role: system,       role-version: latest }
-    - { role: apps,         role-version: latest }
-    - { role: python_env,   role-version: latest }
-    - { role: go_env,       role-version: latest }
-    - { role: arduino_env,  role-version: latest }
+    - { role: brew, tags: 'basic'}
+    - { role: system, tags: 'basic'}
+    - { role: apps, tags: 'graphical'}
+    - { role: python_env, tags: 'dev'}
+    - { role: go_env, tags: 'dev'}
+    - { role: arduino_env, tags: 'electronic'}
