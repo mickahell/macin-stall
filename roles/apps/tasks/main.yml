@@ -1,26 +1,26 @@
 ---
 
 - name: Install video apps
-  community.general.homebrew:
-    name: "homebrew/cask/{{ item }}"
+  community.general.homebrew_cast:
+    name: "{{ item }}"
   loop: "{{ video_apps }}"
 
 - name: Install browser apps
-  community.general.homebrew:
-    name: "homebrew/cask/{{ item }}"
+  community.general.homebrew_cast:
+    name: "{{ item }}"
   loop: "{{ browser_apps }}"
 
 - name: Install coding apps
-  community.general.homebrew:
-    name: "homebrew/cask/{{ item }}"
+  community.general.homebrew_cast:
+    name: "{{ item }}"
   loop: "{{ coding_apps }}"
 
 - name: Install password manager apps
-  community.general.homebrew:
-    name: "homebrew/cask/{{ item }}"
+  community.general.homebrew_cast:
+    name: "{{ item }}"
   loop: "{{ password_apps }}"
 
 - name: Install xtra apps
-  community.general.homebrew:
-    name: "homebrew/cask/{{ item }}"
+  community.general.homebrew_cast:
+    name: "{{ item }}"
   loop: "{{ xtra_apps }}"

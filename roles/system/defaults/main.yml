@@ -2,6 +2,7 @@
 
 system_packages:
   - git
+  - ansible-lint
   - shellcheck
   - neofetch
 

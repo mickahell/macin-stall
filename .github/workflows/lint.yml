@@ -20,7 +20,7 @@ jobs:
       - name: Install community.general collection
         run: |
           pip install -U ansible
-          ansible-galaxy collection install community.general
+          ansible-galaxy collection install community.general --upgrade
       - name: Run ansible-lint
         uses: ansible/ansible-lint@main
 

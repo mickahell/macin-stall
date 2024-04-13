@@ -5,6 +5,6 @@
     name: arduino-cli
 
 - name: Install arduino ide
-  community.general.homebrew:
-    name: homebrew/cask/arduino-ide
+  community.general.homebrew_cast:
+    name: arduino-ide
   when: ide_install
