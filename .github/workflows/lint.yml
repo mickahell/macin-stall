@@ -1,0 +1,28 @@
+name: Linter
+
+on:
+  pull_request:
+    paths:
+      - roles/**'
+      - '**.yml'
+  workflow_dispatch:
+
+jobs:
+  ansible:
+    name: Ansible Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run ansible-lint
+        uses: ansible/ansible-lint@main
+
+jobs:
+  shell:
+    name: ShellCheck Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install shellcheck
+        run: apt install shellcheck
+      - name: Run shellcheck
+        run: shellcheck run.sh
