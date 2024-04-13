@@ -22,7 +22,7 @@ jobs:
           pip install -U ansible ansible-lint
           ansible-galaxy collection install -r requirements.yml --upgrade
       - name: Run ansible-lint
-        run: ansible-lint ./
+        run: ansible-lint macinstall.yml roles/
 
   shell:
     name: ShellCheck Lint

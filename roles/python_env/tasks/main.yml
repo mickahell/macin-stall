@@ -15,7 +15,8 @@
     name: "{{ item }}"
   loop: "{{ test_packages }}"
 
-- ansible.builtin.set_fact:
+- name: Merge test_packages & xtra_packages vars
+  ansible.builtin.set_fact:
     prog_packages: "{{ test_packages + xtra_packages }}"
 
 - name: Pagramming + xtra packages
