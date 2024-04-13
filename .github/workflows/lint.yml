@@ -1,6 +1,9 @@
 name: Linter
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     paths:
       - roles/**'
@@ -15,7 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install community.general collection
-        run: ansible-galaxy collection install community.general
+        run: |
+          pip install -U ansible
+          ansible-galaxy collection install community.general
       - name: Run ansible-lint
         uses: ansible/ansible-lint@main
 
