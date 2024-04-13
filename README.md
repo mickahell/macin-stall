@@ -1,2 +1,3 @@
-# macin-stall
-Mac as code
+# Macin'stall
+
+My mac as-code

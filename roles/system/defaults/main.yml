@@ -1,0 +1,8 @@
+---
+
+system_packages:
+  - git
+  - neofetch
+
+docker_install: true
+anaconda_install: false

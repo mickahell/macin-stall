@@ -1,0 +1,17 @@
+---
+
+video_apps:
+  - vlc
+
+browser_apps:
+  - google-chrome
+
+coding_apps:
+  - sublime-text
+  - visual-studio-code
+
+password_apps:
+  - keepassxc
+
+xtra_apps:
+  - inkscape

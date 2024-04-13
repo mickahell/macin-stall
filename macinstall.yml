@@ -1,0 +1,9 @@
+---
+- hosts: all
+  roles:
+    - { role: brew,         role_version: latest }
+    - { role: system,       role-version: latest }
+    - { role: apps,         role-version: latest }
+    - { role: python_env,   role-version: latest }
+    - { role: go_env,       role-version: latest }
+    - { role: arduino_env,  role-version: latest }

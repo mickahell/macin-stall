@@ -1,0 +1,29 @@
+---
+
+- name: Scientific packages
+  ansible.builtin.pip:
+    name: "{{ item }}"
+  loop: "{{ science_packages }}"
+
+- name: Quantum packages
+  ansible.builtin.pip:
+    name: "{{ item }}"
+  loop: "{{ quantum_packages }}"
+
+- name: Testing packages
+  ansible.builtin.pip:
+    name: "{{ item }}"
+  loop: "{{ test_packages }}"
+
+- set_fact:
+  prog_packages: "{{ test_packages + xtra_packages }}"
+
+- name: Pagramming + xtra packages
+  ansible.builtin.pip:
+    name: "{{ item }}"
+  loop: "{{ prog_packages }}"
+
+- name: Install pycharm
+  community.general.homebrew:
+    name: homebrew/cask/pycharm
+  when: ide_install

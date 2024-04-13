@@ -1,0 +1,10 @@
+---
+
+- name: Install arduino cli
+  community.general.homebrew:
+    name: arduino-cli
+
+- name: Install arduino ide
+  community.general.homebrew:
+    name: homebrew/cask/arduino-ide
+  when: ide_install

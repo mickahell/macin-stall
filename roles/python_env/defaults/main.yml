@@ -1,0 +1,38 @@
+---
+
+science_packages:
+  - pandas
+  - numpy
+  - scipy
+  - networkx
+  - jupyter
+  - matplotlib
+
+quantum_packages:
+  - qiskit
+  - qiskit-aer
+  - qiskit-nature
+  - qiskit-finance
+  - qiskit-optimization
+  - qiskit-machine-learning
+  - qiskit-ibm-runtime
+
+test_packages:
+  - tox
+  - pytest
+  - black
+  - pylint
+  - coverage
+  - pillow
+  - testcontainers
+
+coding_packages:
+  - pyyaml
+  - nbconvert
+  - nbformat
+  - direnv
+  - streamlit
+
+xtra_packages: []
+
+ide_install: true
