@@ -17,13 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install community.general collection
+      - name: Install needs
         run: |
-          pip install -U ansible
+          pip install -U ansible ansible-lint
           ansible-galaxy collection install -r requirements.yml --upgrade
-          ansible-galaxy collection list community.general
       - name: Run ansible-lint
-        uses: ansible/ansible-lint@v6
+        run: ansible-lint ./
 
   shell:
     name: ShellCheck Lint
