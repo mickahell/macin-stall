@@ -1,9 +1,0 @@
----
-
-- name: Prepare
-  hosts: all
-  tasks:
-    - name: Install python in Ubuntu
-      ansible.builtin.raw: >
-        apt update && \
-        apt install -y --no-install-recommends python3 sudo curl
