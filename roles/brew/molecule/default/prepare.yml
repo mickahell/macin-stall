@@ -3,8 +3,6 @@
 - name: Prepare
   hosts: all
   tasks:
-    - name: Update apt cache.
-      apt: update_cache=true
-
-    - name: Install test dependencies.
-      package: name=curl state=present
+    - name: Install dependencies.
+      ansible.builtin.apt:
+        name: curl
