@@ -4,7 +4,7 @@
   become: true
   hosts: all
   environment:
-    PATH: "/home/linuxbrew/.linuxbrew/bin:{{ ansible_env.PATH }}"    
+    PATH: "/home/linuxbrew/.linuxbrew/bin:{{ ansible_env.PATH }}"
 
   roles:
     - role: brew
