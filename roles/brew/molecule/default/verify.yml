@@ -1,0 +1,12 @@
+---
+ 
+- name: Verify
+  hosts: all
+  tasks:
+    - name: Check is brew is installed
+      community.general.homebrew:
+        name: git
+
+    - name: Check is brew cask is installed
+      community.general.homebrew_cask:
+        name: sublime-text
