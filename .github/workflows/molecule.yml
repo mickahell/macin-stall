@@ -16,7 +16,7 @@ jobs:
     strategy:
       max-parallel: 2
       matrix:
-        roles: ["brew"]
+        roles: ["brew", "go-env", "python-env"]
     steps:
       - uses: actions/checkout@v4
       - name: Install needs
