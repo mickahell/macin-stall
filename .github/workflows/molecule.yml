@@ -14,9 +14,9 @@ jobs:
     name: Molecule
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 2
+      max-parallel: 4
       matrix:
-        roles: ["brew", "go-env", "python-env"]
+        roles: ["brew", "go_env", "python_env", "arduino_env", "system"]
     steps:
       - uses: actions/checkout@v4
       - name: Install needs

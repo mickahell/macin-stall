@@ -5,6 +5,8 @@
   hosts: all
   environment:
     PATH: "/home/linuxbrew/.linuxbrew/bin:{{ ansible_env.PATH }}"
+  vars:
+    arduino_env_ide_install: false
 
   roles:
     - role: brew

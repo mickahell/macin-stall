@@ -1,0 +1,15 @@
+---
+
+- name: Verify
+  hosts: all
+  environment:
+    PATH: "/home/linuxbrew/.linuxbrew/bin:{{ ansible_env.PATH }}"
+
+  tasks:
+    - name: Check if system packages installed
+      ansible.builtin.command: neofetch --version
+      changed_when: false
+
+    - name: Check if docker installed
+      ansible.builtin.command: docker --version
+      changed_when: false

@@ -7,7 +7,7 @@
 
   tasks:
     - name: Check if Brew installed
-      ansible.builtin.shell: brew --version
+      ansible.builtin.command: brew --version
       changed_when: false
 
     - name: Install a simple brew package
