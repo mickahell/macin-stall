@@ -7,14 +7,14 @@
 
   tasks:
     - name: Check pip science package
-      ansible.builtin.shell: pip show pandas
+      ansible.builtin.command: pip show pandas
       changed_when: false
     - name: Check pip quantum package
-      ansible.builtin.shell: pip show qiskit
+      ansible.builtin.command: pip show qiskit
       changed_when: false
     - name: Check pip test package
-      ansible.builtin.shell: pip show tox
+      ansible.builtin.command: pip show tox
       changed_when: false
     - name: Check pip quantum package
-      ansible.builtin.shell: pip show direnv
+      ansible.builtin.command: pip show direnv
       changed_when: false

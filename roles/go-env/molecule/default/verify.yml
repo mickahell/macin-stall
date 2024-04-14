@@ -7,5 +7,5 @@
 
   tasks:
     - name: Check if go installed
-      ansible.builtin.shell: go version
+      ansible.builtin.command: go version
       changed_when: false
