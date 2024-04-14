@@ -2,11 +2,13 @@
 
 - name: Verify
   hosts: all
-  tasks:
-    - name: Check is brew is installed
-      community.general.homebrew:
-        name: git
+  environment:
+    PATH: "/home/linuxbrew/.linuxbrew/bin:{{ ansible_env.PATH }}"
 
-    - name: Check is brew cask is installed
-      community.general.homebrew_cask:
-        name: sublime-text
+  tasks:
+    - name: Check if Brew installed
+      ansible.builtin.shell: brew --version
+
+    - name: Install a simple brew package
+      community.general.homebrew:
+        name: wget

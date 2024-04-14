@@ -6,4 +6,4 @@
     - name: Install python in Ubuntu
       ansible.builtin.raw: >
         apt update && \
-        apt install -y --no-install-recommends python3 sudo curl
+        apt install -y --no-install-recommends python3 sudo curl git

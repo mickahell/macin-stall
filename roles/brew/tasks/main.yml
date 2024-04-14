@@ -1,13 +1,14 @@
 ---
 
 - name: Check if Brew installed
-  ansible.builtin.stat:
-    path: /usr/local/bin/brew
-  register: homebrew_check
-
-- name: Install Brew
-  ansible.builtin.shell: "curl -fsSL {{ brew_url }}"
+  ansible.builtin.shell: brew --version
   args:
     executable: /bin/bash
-  when: not homebrew_check.stat.exists
+  register: homebrew_check
+  ignore_errors: true
   changed_when: false
+
+- name: Install Brew
+  ansible.builtin.shell: /bin/bash -c "$(curl -fsSL {{ brew_url }})"
+  when: homebrew_check.rc != 0
+  changed_when: true
