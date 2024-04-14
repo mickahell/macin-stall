@@ -15,6 +15,6 @@
     - name: Check pip test package
       ansible.builtin.command: pip show tox
       changed_when: false
-    - name: Check pip quantum package
+    - name: Check pip coding package
       ansible.builtin.command: pip show direnv
       changed_when: false

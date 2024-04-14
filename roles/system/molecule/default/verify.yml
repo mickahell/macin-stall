@@ -7,7 +7,7 @@
 
   tasks:
     - name: Check if system packages installed
-      ansible.builtin.command: neofetch --version
+      ansible.builtin.command: neofetch
       changed_when: false
 
     - name: Check if docker installed

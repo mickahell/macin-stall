@@ -14,7 +14,7 @@ jobs:
     name: Molecule
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 4
+      max-parallel: 5
       matrix:
         roles: ["brew", "go_env", "python_env", "arduino_env", "system"]
     steps:
