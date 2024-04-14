@@ -8,3 +8,4 @@
   tasks:
     - name: Check if arduino-cli installed
       ansible.builtin.shell: arduino-cli version
+      change_when: false

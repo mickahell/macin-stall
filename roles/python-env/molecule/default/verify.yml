@@ -8,9 +8,13 @@
   tasks:
     - name: Check pip science package
       ansible.builtin.shell: pip show pandas
+      change_when: false
     - name: Check pip quantum package
       ansible.builtin.shell: pip show qiskit
+      change_when: false
     - name: Check pip test package
       ansible.builtin.shell: pip show tox
+      change_when: false
     - name: Check pip quantum package
       ansible.builtin.shell: pip show direnv
+      change_when: false
