@@ -4,8 +4,11 @@
   hosts: all
 
   pre_tasks:
-    - name: Needs some packages
-      package: name=curl
+    - name: Update apt cache.
+      apt: update_cache=true
+
+    - name: Install test dependencies.
+      package: name=curl state=present
 
   roles:
     - role: brew
