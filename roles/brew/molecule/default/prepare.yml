@@ -3,7 +3,10 @@
 - name: Prepare
   hosts: all
   tasks:
-    - name: Install python in Ubuntu
-      ansible.builtin.raw: >
-        apt update && \
-        apt install -y --no-install-recommends python3 sudo curl git
+    - name: Install python and other needs
+      ansible.builtin.apt:
+        pkg:
+          - git
+          - sudo
+          - curl
+        update_cache: true

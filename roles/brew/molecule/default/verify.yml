@@ -8,6 +8,7 @@
   tasks:
     - name: Check if Brew installed
       ansible.builtin.shell: brew --version
+      changed_when: false
 
     - name: Install a simple brew package
       community.general.homebrew:
