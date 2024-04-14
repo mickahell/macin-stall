@@ -6,13 +6,18 @@ on:
       - main
   pull_request:
     paths:
-      - roles/**'
+      - 'roles/**'
   workflow_dispatch:
 
 jobs:
-  brew:
-    name: Ansible Lint
+  molecule:
+    name: Molecule
     runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 2
+      matrix:
+        python-version: [3.9, '3.10']
+        roles: ["brew"]
     steps:
       - uses: actions/checkout@v4
       - name: Install needs
@@ -21,5 +26,5 @@ jobs:
           ansible-galaxy collection install -r requirements.yml --upgrade
       - name: Run molecule
         run: |
-          cd roles/brew
+          cd roles/${{ matrix.roles }}
           molecule test
