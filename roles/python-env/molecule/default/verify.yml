@@ -1,0 +1,16 @@
+---
+
+- name: Verify
+  hosts: all
+  environment:
+    PATH: "/home/linuxbrew/.linuxbrew/bin:{{ ansible_env.PATH }}"
+
+  tasks:
+    - name: Check pip science package
+      ansible.builtin.shell: pip show pandas
+    - name: Check pip quantum package
+      ansible.builtin.shell: pip show qiskit
+    - name: Check pip test package
+      ansible.builtin.shell: pip show tox
+    - name: Check pip quantum package
+      ansible.builtin.shell: pip show direnv
