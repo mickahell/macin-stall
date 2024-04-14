@@ -1,10 +1,8 @@
 ---
 
 system_packages:
-  - git
-  - ansible-lint
-  - shellcheck
   - neofetch
+  - shellcheck
 
 system_docker_install: true
 system_anaconda_install: false

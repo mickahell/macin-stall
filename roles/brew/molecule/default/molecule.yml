@@ -1,0 +1,13 @@
+---
+
+dependency:
+  name: galaxy
+driver:
+  name: docker
+platforms:
+  - name: ubuntu
+    image: ubuntu:jammy
+provisioner:
+  name: ansible
+verifier:
+  name: ansible

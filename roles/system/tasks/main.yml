@@ -3,12 +3,12 @@
 - name: Install basic system packages
   community.general.homebrew:
     name: "{{ item }}"
-  loop: "{{ system_system_packages }}"
+  loop: "{{ system_packages }}"
 
 - name: Install docker
   community.general.homebrew:
     name: docker
-  when: dsystem_ocker_install
+  when: system_docker_install
 
 - name: Install anaconda
   community.general.homebrew_cask:

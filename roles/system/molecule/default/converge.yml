@@ -1,0 +1,11 @@
+---
+
+- name: Converge
+  become: true
+  hosts: all
+  environment:
+    PATH: "/home/linuxbrew/.linuxbrew/bin:{{ ansible_env.PATH }}"
+
+  roles:
+    - role: brew
+    - role: system

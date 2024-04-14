@@ -1,0 +1,11 @@
+---
+
+- name: Verify
+  hosts: all
+  environment:
+    PATH: "/home/linuxbrew/.linuxbrew/bin:{{ ansible_env.PATH }}"
+
+  tasks:
+    - name: Check if go installed
+      ansible.builtin.command: go version
+      changed_when: false

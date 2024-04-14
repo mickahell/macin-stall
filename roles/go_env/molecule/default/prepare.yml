@@ -1,0 +1,12 @@
+---
+
+- name: Prepare
+  hosts: all
+  tasks:
+    - name: Install python and other needs
+      ansible.builtin.apt:
+        pkg:
+          - git
+          - sudo
+          - curl
+        update_cache: true

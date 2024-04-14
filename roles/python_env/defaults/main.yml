@@ -1,11 +1,11 @@
 ---
 
 python_env_science_packages:
-  - pandas
   - numpy
   - scipy
-  - networkx
+  - pandas
   - jupyter
+  - networkx
   - matplotlib
 
 python_env_quantum_packages:
@@ -13,24 +13,24 @@ python_env_quantum_packages:
   - qiskit-aer
   - qiskit-nature
   - qiskit-finance
+  - qiskit-ibm-runtime
   - qiskit-optimization
   - qiskit-machine-learning
-  - qiskit-ibm-runtime
 
 python_env_test_packages:
   - tox
-  - pytest
   - black
+  - pytest
   - pylint
-  - coverage
   - pillow
+  - coverage
   - testcontainers
 
 python_env_coding_packages:
-  - pyyaml
-  - nbconvert
-  - nbformat
   - direnv
+  - pyyaml
+  - nbformat
+  - nbconvert
   - streamlit
 
 python_env_xtra_packages: []

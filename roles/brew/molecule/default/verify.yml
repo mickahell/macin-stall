@@ -1,0 +1,15 @@
+---
+
+- name: Verify
+  hosts: all
+  environment:
+    PATH: "/home/linuxbrew/.linuxbrew/bin:{{ ansible_env.PATH }}"
+
+  tasks:
+    - name: Check if Brew installed
+      ansible.builtin.command: brew --version
+      changed_when: false
+
+    - name: Install a simple brew package
+      community.general.homebrew:
+        name: wget

@@ -1,0 +1,29 @@
+name: Molecule
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    paths:
+      - 'roles/**'
+  workflow_dispatch:
+
+jobs:
+  molecule:
+    name: Molecule
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 5
+      matrix:
+        roles: ["brew", "go_env", "python_env", "arduino_env", "system"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install needs
+        run: |
+          pip install -r requirements.txt -U
+          ansible-galaxy collection install -r requirements.yml --upgrade
+      - name: Run molecule
+        run: |
+          cd roles/${{ matrix.roles }}
+          molecule test
