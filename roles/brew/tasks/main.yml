@@ -10,4 +10,4 @@
   args:
     executable: /bin/bash
   when: not homebrew_check.stat.exists
-  changed_when: true
+  changed_when: false
