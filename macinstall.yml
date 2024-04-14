@@ -7,6 +7,6 @@
     - { role: brew, tags: 'basic'}
     - { role: system, tags: 'basic'}
     - { role: apps, tags: 'graphical'}
-    - { role: python-env, tags: 'dev'}
-    - { role: go-env, tags: 'dev'}
-    - { role: arduino-env, tags: 'electronic'}
+    - { role: python_env, tags: 'dev'}
+    - { role: go_env, tags: 'dev'}
+    - { role: arduino_env, tags: 'electronic'}

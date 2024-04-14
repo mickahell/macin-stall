@@ -8,4 +8,4 @@
 
   roles:
     - role: brew
-    - role: arduino-env
+    - role: go_env
