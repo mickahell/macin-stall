@@ -8,4 +8,4 @@
   tasks:
     - name: Check if go installed
       ansible.builtin.shell: go version
-      change_when: false
+      changed_when: false
