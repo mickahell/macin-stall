@@ -36,7 +36,7 @@ jobs:
           ansible-galaxy install -r requirements.yml
 
       - name: Test the playbook
-        run: ansible-playbook -i tests/hosts macinstall.yml
+        run: ansible-playbook -i hosts macinstall.yml
         env:
           ANSIBLE_FORCE_COLOR: '1'
 
