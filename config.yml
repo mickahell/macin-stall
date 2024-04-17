@@ -38,7 +38,7 @@ dotfiles_files:
   - .osx
   - .vimrc
 
-osx_script: "{{ dotfiles_repo_local_destination }}/.osx --no-restart"
+osx_script: "~/.osx --no-restart"
 
 # MAS - Apps Store
 mas_configure: true
