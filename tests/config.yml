@@ -12,4 +12,5 @@ homebrew_installed_packages:
 homebrew_cask_apps:
   - sublime-text
 
-osx_script: "~/.osx --no-restart"
+dotfiles_configure: false
+mas_configure: false
