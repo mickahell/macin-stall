@@ -1,6 +1,6 @@
 ---
 
-- name: Ensure Sublime text user Preferences and theme are set.
+- name: Copy .osx file
   ansible.builtin.copy:
     src: ".osx"
     dest: "{{ osx_path }}"

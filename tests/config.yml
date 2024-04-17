@@ -12,5 +12,4 @@ homebrew_installed_packages:
 homebrew_cask_apps:
   - sublime-text
 
-dotfiles_configure: false
 mas_configure: false

@@ -9,8 +9,6 @@
   roles:
     - role: elliotweiser.osx-command-line-tools
     - role: geerlingguy.mac.homebrew
-    - role: geerlingguy.dotfiles
-      when: dotfiles_configure
     - role: geerlingguy.mac.mas
       when: mas_configure
     - role: python_env
