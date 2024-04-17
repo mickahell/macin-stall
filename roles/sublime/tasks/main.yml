@@ -1,4 +1,5 @@
 ---
+
 - name: Ensure Sublime Text directories exist.
   ansible.builtin.file:
     path: "{{ item }}"
