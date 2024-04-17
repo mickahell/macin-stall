@@ -30,7 +30,7 @@ jobs:
 
       - name: Install test dependencies
         run: |
-          cp tests/config.yml ./config.yml
+          cp -f tests/config.yml ./config.yml
           pip install --upgrade pip
           pip install -r requirements.txt
           ansible-galaxy install -r requirements.yml

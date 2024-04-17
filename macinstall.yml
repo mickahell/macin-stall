@@ -4,7 +4,7 @@
   hosts: all
 
   vars_files:
-    - default.config.yml
+    - config.yml
 
   roles:
     - role: elliotweiser.osx-command-line-tools

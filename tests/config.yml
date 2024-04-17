@@ -10,7 +10,6 @@ homebrew_installed_packages:
   - wget
 
 homebrew_cask_apps:
-  - google-chrome
   - sublime-text
 
 osx_script: "~/.osx --no-restart"
