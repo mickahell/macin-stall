@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Uninstall GitHub Actions built-in Homebrew
-        run: tests/uninstall-homebrew.sh
+        run: ./tests/uninstall-homebrew.sh
 
       - name: Uninstall GitHub Actions' built-in browser installs
         run: |
@@ -29,7 +29,7 @@ jobs:
           sudo rm -rf /usr/local/bin/firefox
 
       - name: Install test dependencies.
-        run: run.sh
+        run: ./run.sh
       
       - name: Install test dependencies.
         run: |
