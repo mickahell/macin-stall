@@ -28,12 +28,12 @@ jobs:
           sudo rm -rf /Applications/Google\ Chrome.app
           sudo rm -rf /usr/local/bin/firefox
 
-      - name: Install test dependencies.
-        run: ./run.sh
-      
-      - name: Install test dependencies.
+      - name: Install test dependencies
         run: |
           cp tests/config.yml ./config.yml
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          ansible-galaxy collection install -r requirements.yml
 
       - name: Test the playbook's syntax
         run: ansible-playbook -i host macinstall.yml --syntax-check

@@ -31,5 +31,3 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install shellcheck
         run: sudo apt install shellcheck
-      - name: Run shellcheck
-        run: shellcheck run.sh
