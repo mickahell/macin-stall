@@ -1,5 +1,7 @@
 ---
 
+system_homebrew_cask_appdir: /Applications
+
 system_packages:
   - neofetch
   - shellcheck

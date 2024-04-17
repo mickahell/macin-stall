@@ -1,0 +1,16 @@
+---
+
+homebrew_cask_appdir: /Applications
+homebrew_installed_packages:
+  - autoconf
+  - bash-completion
+  - gettext
+  - ssh-copy-id
+  - cowsay
+  - wget
+
+homebrew_cask_apps:
+  - google-chrome
+  - sublime-text
+
+osx_script: "~/.osx --no-restart"

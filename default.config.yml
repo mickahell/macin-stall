@@ -1,0 +1,47 @@
+---
+
+# Homebrew
+homebrew_cask_appdir: /Applications
+homebrew_installed_packages:
+  - ssh-copy-id
+  - arduino-cli
+  - go
+  - neofetch
+  - shellcheck
+  - bash-completion
+  - gettext
+  - git
+  - openssl
+homebrew_cask_apps:
+  - docker
+  - google-chrome
+  - vlc
+  - sublime-text
+  - visual-studio-code
+  - keepassxc
+  - inkscape
+  - arduino-ide
+  - pycharm
+  - google-drive
+  - slack
+  - discord
+homebrew_taps: []
+
+# Dotfile
+dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
+dotfiles_files:
+  - .gitignore
+  - .inputrc
+  - .osx
+  - .vimrc
+
+osx_script: "~/.osx --no-restart"
+
+# MAS - Apps Store
+mas_installed_apps:
+  - id: 497799835
+    name: "Xcode (8.1)"
+mas_email: ""
+mas_password: ""

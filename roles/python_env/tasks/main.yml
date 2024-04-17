@@ -23,8 +23,3 @@
   ansible.builtin.pip:
     name: "{{ item }}"
   loop: "{{ prog_packages }}"
-
-- name: Install pycharm
-  community.general.homebrew_cask:
-    name: pycharm
-  when: python_env_ide_install

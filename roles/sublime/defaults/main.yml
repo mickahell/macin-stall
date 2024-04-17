@@ -1,0 +1,26 @@
+---
+
+# Sublime text package
+sublime_base_path: '~/Library/Application Support/Sublime Text'
+sublime_config_path: "Packages/User"
+
+sublime_package_url: "https://packagecontrol.io/Package%20Control.sublime-package"
+sublime_package_control:
+  - "DocBlockr"
+  - "Dockerfile Syntax Highlighting"
+  - "FileDiffs"
+  - "GitHub Flavored Markdown Preview"
+  - "Jinja2"
+  - "Package Control"
+  - "Pretty JSON"
+  - "SublimeLinter"
+  - "SublimeLinter-contrib-yamllint"
+  - "TrailingSpaces"
+  - "WordCount"
+
+sublime_theme_pref:
+  - "Cobalt (SL).tmTheme"
+  - "Markdown.sublime-settings"
+  - "Plain text.sublime-settings"
+  - "Preferences.sublime-settings"
+  - "WordCount.sublime-settings"

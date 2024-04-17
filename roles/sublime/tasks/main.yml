@@ -1,0 +1,24 @@
+---
+- name: Ensure Sublime Text directories exist.
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - "{{ sublime_base_path }}/{{ sublime_config_path }}"
+    - "{{ sublime_base_path }}/Installed Packages"
+
+- name: Ensure Sublime Package Control is installed.
+  get_url:
+    url: "{{ sublime_package_url }}"
+    dest: "{{ sublime_base_path }}/Installed Packages/Package Control.sublime-package"
+
+- name: Ensure Sublime Package Control Packages are configured.
+  template:
+    src: Package_Control.sublime-settings.j2
+    dest: "{{ sublime_base_path }}/{{ sublime_config_path }}/Package Control.sublime-settings"
+
+- name: Ensure Sublime text user Preferences and theme are set.
+  copy:
+    src: "{{ item }}"
+    dest: "{{ sublime_base_path }}/{{ sublime_config_path }}/{{ item }}"
+  loop: "{{ sublime_theme_pref }}"
