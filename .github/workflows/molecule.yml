@@ -14,7 +14,6 @@ jobs:
     name: Molecule
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 5
       matrix:
         roles: ["python_env"]
     steps:
