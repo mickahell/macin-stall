@@ -1,0 +1,4 @@
+---
+
+osx_path: "~/.osx"
+osx_script: "{{ osx_path }} --no-restart"
