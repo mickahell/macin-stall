@@ -18,3 +18,5 @@ python_env_science_packages: ['numpy']
 python_env_quantum_packages: ['qiskit']
 python_env_test_packages: ['tox']
 python_env_coding_packages: ['direnv']
+
+osx_configure: false

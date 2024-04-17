@@ -34,3 +34,5 @@ mas_installed_apps:
     name: "Xcode (8.1)"
 mas_email: ""
 mas_password: ""
+
+osx_configure: true
