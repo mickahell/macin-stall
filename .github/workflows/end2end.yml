@@ -1,5 +1,5 @@
 ---
-name: End2end test
+name: End2end
 
 on:
   push:
