@@ -13,17 +13,17 @@
   ansible.builtin.get_url:
     url: "{{ sublime_package_url }}"
     dest: "{{ sublime_base_path }}/Installed Packages/Package Control.sublime-package"
-    mode: '700'
+    mode: '0700'
 
 - name: Ensure Sublime Package Control Packages are configured.
   ansible.builtin.template:
     src: Package_Control.sublime-settings.j2
     dest: "{{ sublime_base_path }}/{{ sublime_config_path }}/Package Control.sublime-settings"
-    mode: '700'
+    mode: '0700'
 
 - name: Ensure Sublime text user Preferences and theme are set.
   ansible.builtin.copy:
     src: "{{ item }}"
     dest: "{{ sublime_base_path }}/{{ sublime_config_path }}/{{ item }}"
-    mode: '700'
+    mode: '0700'
   loop: "{{ sublime_theme_pref }}"
