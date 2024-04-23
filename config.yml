@@ -27,6 +27,7 @@ homebrew_cask_apps:
   - discord
   - wch-ch34x-usb-serial-driver
 homebrew_taps: []
+ansible_become_password: ""
 
 # MAS - Apps Store
 mas_configure: true
