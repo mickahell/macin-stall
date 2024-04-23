@@ -33,6 +33,7 @@ jobs:
           cp -f tests/config.yml ./config.yml
           pip install --upgrade pip
           pip install -r requirements.txt
+          pip install -r dev-requirements.txt
           ansible-galaxy install -r requirements.yml
 
       - name: Test the playbook
