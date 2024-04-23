@@ -25,6 +25,7 @@ homebrew_cask_apps:
   - google-drive
   - slack
   - discord
+  - wch-ch34x-usb-serial-driver
 homebrew_taps: []
 
 # MAS - Apps Store
