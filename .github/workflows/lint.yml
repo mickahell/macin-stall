@@ -14,7 +14,7 @@ on:
 jobs:
   ansible:
     name: Ansible Lint
-    runs-on: macos-latest
+    runs-on: macos-13
     steps:
       - uses: actions/checkout@v4
       - name: Install needs

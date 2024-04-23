@@ -1,4 +1,4 @@
-ansible==9.4.0
-ansible-lint==24.2.2
-molecule==24.2.1
-molecule-plugins[docker]==23.5.3
+ansible
+ansible-lint
+molecule
+molecule-plugins[docker]
