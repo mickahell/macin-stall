@@ -32,7 +32,8 @@ python_env_coding_packages:
   - nbformat
   - nbconvert
   - streamlit
+  - ansible-lint
+  - molecule
+  - 'molecule-plugins[docker]'
 
 python_env_xtra_packages: []
-
-python_env_ide_install: true

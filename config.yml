@@ -1,0 +1,41 @@
+---
+
+# Homebrew
+homebrew_cask_appdir: /Applications
+homebrew_installed_packages:
+  - ssh-copy-id
+  - arduino-cli
+  - go
+  - neofetch
+  - shellcheck
+  - bash-completion
+  - gettext
+  - git
+  - openssl
+  - platformio
+homebrew_cask_apps:
+  - docker
+  - google-chrome
+  - vlc
+  - sublime-text
+  - visual-studio-code
+  - keepassxc
+  - inkscape
+  - arduino-ide
+  - pycharm
+  - google-drive
+  - slack
+  - discord
+  - wch-ch34x-usb-serial-driver
+homebrew_taps: []
+ansible_become_password: ""
+
+# MAS - Apps Store
+mas_configure: true
+mas_installed_apps:
+  - id: 497799835
+    name: "Xcode (8.1)"
+mas_email: ""
+mas_password: ""
+
+osx_configure: true

@@ -5,8 +5,6 @@
   hosts: all
   environment:
     PATH: "/home/linuxbrew/.linuxbrew/bin:{{ ansible_env.PATH }}"
-  vars:
-    python_env_ide_install: false
 
   roles:
     - role: brew

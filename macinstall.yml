@@ -3,10 +3,18 @@
 - name: "Macin'stall"
   hosts: all
 
+  vars_files:
+    - config.yml
+
   roles:
-    - { role: brew, tags: 'basic'}
-    - { role: system, tags: 'basic'}
-    - { role: apps, tags: 'graphical'}
-    - { role: python_env, tags: 'dev'}
-    - { role: go_env, tags: 'dev'}
-    - { role: arduino_env, tags: 'electronic'}
+    - role: elliotweiser.osx-command-line-tools
+    - role: geerlingguy.mac.homebrew
+    - role: geerlingguy.mac.mas
+      when: mas_configure
+    - role: python_env
+    - role: sublime
+    - role: osx
+      when: osx_configure
+
+  # tasks:
+    # - import_tasks: tasks/terminal.yml

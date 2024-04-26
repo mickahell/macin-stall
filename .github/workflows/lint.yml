@@ -14,15 +14,19 @@ on:
 jobs:
   ansible:
     name: Ansible Lint
-    runs-on: ubuntu-latest
+    runs-on: macos-13
     steps:
       - uses: actions/checkout@v4
       - name: Install needs
         run: |
-          pip install -r requirements.txt -U
-          ansible-galaxy collection install -r requirements.yml --upgrade
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -r dev-requirements.txt
+          ansible-galaxy install -r requirements.yml
       - name: Run ansible-lint
         uses: ansible/ansible-lint@main
+      # - name: Test the playbook's syntax
+      #  run: ansible-playbook -i hosts macinstall.yml --syntax-check
 
   shell:
     name: ShellCheck Lint
@@ -32,4 +36,4 @@ jobs:
       - name: Install shellcheck
         run: sudo apt install shellcheck
       - name: Run shellcheck
-        run: shellcheck run.sh
+        run: shellcheck tests/uninstall-homebrew.sh
