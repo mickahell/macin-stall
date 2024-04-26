@@ -25,7 +25,7 @@ jobs:
           ansible-galaxy install -r requirements.yml
       - name: Run ansible-lint
         uses: ansible/ansible-lint@main
-      #- name: Test the playbook's syntax
+      # - name: Test the playbook's syntax
       #  run: ansible-playbook -i hosts macinstall.yml --syntax-check
 
   shell:
