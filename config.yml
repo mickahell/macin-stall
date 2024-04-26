@@ -12,6 +12,7 @@ homebrew_installed_packages:
   - gettext
   - git
   - openssl
+  - platformio
 homebrew_cask_apps:
   - docker
   - google-chrome
